@@ -1,1 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* ------------------------------------------- FONTS ------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "HV Muse";
+  src: url("../fonts/hv-muse.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------- FONT SIZES --------------------------------------------------------- */
+:root {
+  --h1: ;
+  --h2: ;
+  --h3: ;
+  --h4: ;
+  --p: 0.85rem;
+}
+
+/* ------------------------------------------- COLOURS ------------------------------------------------------------ */
+body {
+  --primary-green: #014421;
+  --primary-green-hover: #00361a;
+  --secondary-mustard: #d4af37;
+  --secondary-mustard-hover: #9c8024;
+  --black: #2f2f2f;
+  --white: #f5f5dc;
+  --accent: #ffdb58;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: var(--p);
+}
+
+/* ------------------------------------------- CUSTOM STYLES ------------------------------------------------------ */
+ul,
+li,
+p {
+  list-style: none;
+  color: var(--black);
+  font-size: var(--p);
+}
+h1 {
+  font-family: "HV Muse", sans-serif;
+  color: var(--white);
+  font-size: var(--h1);
+}
+h1 span {
+  color: var(--secondary-mustard);
+}
+h2 {
+  font-family: "HV Muse", sans-serif;
+  color: var(--primary-green);
+  font-size: var(--h2);
+}
+a {
+  text-decoration: none;
+  font-size: var(--p);
+}
+
+/* ------------------------------------------- BUTTONS ------------------------------------------------------ */
+.btn-green {
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+  background-color: var(--primary-green);
+  border: 3px solid var(--primary-green);
+  color: var(--white);
+  transition: background-color 300ms ease;
+}
+.btn-green:hover {
+  background-color: var(--primary-green-hover);
+  border: 3px solid var(--primary-green-hover);
+}
+.btn-yellow {
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+  background-color: var(--secondary-mustard);
+  border: 3px solid var(--secondary-mustard);
+  color: var(--white);
+  transition: background-color 300ms ease;
+}
+.btn-yellow:hover {
+  background-color: var(--secondary-mustard-hover);
+  border: 3px solid var(--secondary-mustard-hover);
+}
+.btn-yellow-open {
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 3px solid var(--secondary-mustard);
+  color: var(--secondary-mustard);
+  transition: background-color 300ms ease;
+}
+.btn-yellow-open:hover {
+  background-color: var(--secondary-mustard-hover);
+  border: 3px solid var(--secondary-mustard-hover);
+  color: var(--white);
+}
+
+/* ------------------------------------------- OTHER STYLES ------------------------------------------------------ */
+.image-container{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+.image-container img{
+    width: 100%;
+    object-fit: fill;
+}
