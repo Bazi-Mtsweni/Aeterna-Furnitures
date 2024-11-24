@@ -2,18 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "HV Muse";
-  src: url("../fonts/hv-muse.otf") format("otf");
+  src: url("../fonts/hv-muse.otf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ------------------------------------------- FONT SIZES --------------------------------------------------------- */
 :root {
-  --h1: ;
-  --h2: ;
-  --h3: ;
-  --h4: ;
+  --h1: 3rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --h4: 1.2rem;
   --p: 0.85rem;
+
+  --nav-height: 10vh;
 }
 
 /* ------------------------------------------- COLOURS ------------------------------------------------------------ */
@@ -24,11 +32,14 @@ body {
   --secondary-mustard-hover: #9c8024;
   --black: #2f2f2f;
   --white: #f5f5dc;
+  --grey: rgba(30, 30, 30, 0.1);
   --accent: #ffdb58;
 
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: var(--p);
+  overflow-x: hidden !important;
+  max-width: 100% !important;
 }
 
 /* ------------------------------------------- CUSTOM STYLES ------------------------------------------------------ */
@@ -39,27 +50,47 @@ p {
   color: var(--black);
   font-size: var(--p);
 }
-h1 {
+h1, .title-xl {
   font-family: "HV Muse", sans-serif;
   color: var(--white);
   font-size: var(--h1);
 }
-h1 span {
+h1 span, .title-xl span {
   color: var(--secondary-mustard);
 }
 h2 {
   font-family: "HV Muse", sans-serif;
   color: var(--primary-green);
   font-size: var(--h2);
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+h3{
+  font-size: var(--h3);
+}
+h4{
+  font-size: var(--h4);
+}
+p{
+  line-height: 2;
+  font-weight: 500;
 }
 a {
   text-decoration: none;
   font-size: var(--p);
+  font-weight: 500;
 }
-
+hr{
+  width: 30%;
+  margin: 5rem auto;
+  height: 3px;
+  background-color: var(--black);
+  opacity: 0.3;
+}
 /* ------------------------------------------- BUTTONS ------------------------------------------------------ */
 .btn-green {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 7px;
   background-color: var(--primary-green);
   border: 3px solid var(--primary-green);
@@ -71,19 +102,19 @@ a {
   border: 3px solid var(--primary-green-hover);
 }
 .btn-yellow {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 7px;
   background-color: var(--secondary-mustard);
   border: 3px solid var(--secondary-mustard);
   color: var(--white);
-  transition: background-color 300ms ease;
+  transition: background-color 300ms ease, border 300ms ease;
 }
 .btn-yellow:hover {
   background-color: var(--secondary-mustard-hover);
   border: 3px solid var(--secondary-mustard-hover);
 }
 .btn-yellow-open {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 7px;
   background-color: transparent;
   border: 3px solid var(--secondary-mustard);
@@ -97,12 +128,115 @@ a {
 }
 
 /* ------------------------------------------- OTHER STYLES ------------------------------------------------------ */
-.image-container{
-    position: relative;
-    width: 30%;
-    overflow: hidden;
+.image-container {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
 }
-.image-container img{
+.image-container img {
+  width: 100%;
+  object-fit: fill;
+}
+.flex,
+.flex-res {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ------------------------------------------- HEADER & NAV ------------------------------------------------------ */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  height: var(--nav-height);
+  transition: height 300ms ease;
+  z-index: 999;
+  padding: 5%;
+}
+header .logo {
+  width: 10%;
+}
+header nav {
+  width: 75%;
+}
+header nav ul {
+  width: 70%;
+}
+header nav a {
+  color: var(--white);
+  position: relative;
+}
+header nav a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondary-mustard);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  transform-origin: left;
+  transition: width 300ms ease;
+}
+header nav a:hover::after {
+  width: 40%;
+}
+header nav a:nth-child(2)::after {
+  content: '';
+  width: 40%;
+  height: 2px;
+  background-color: var(--secondary-mustard);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ------------------------------------------- MEDIA QUERIES ------------------------------------------------------ */
+@media screen and (max-width: 1024px) {
+  header nav {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --h1: 2.5rem;
+    --h2: ;
+    --h3: ;
+    --h4: ;
+    --a: 0.75rem;
+  }
+  .btn-yellow {
+    padding: 0.7rem 0.5rem;
+    border-radius: 7px;
+    font-size: var(--a);
+  }
+  header .logo {
+    width: 15%;
+  }
+  header nav {
+    padding-left: 0;
+  }
+  header nav ul li a {
+    font-size: var(--a);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --h1: 2rem;
+    --h2: ;
+    --h3: ;
+    --h4: ;
+    --a: 0.75rem;
+  }
+  .flex-res {
     width: 100%;
-    object-fit: fill;
+    padding: 5%;
+    flex-direction: column;
+  }
 }

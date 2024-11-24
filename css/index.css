@@ -1,0 +1,305 @@
+section{
+  position: relative;
+}
+a{
+  display: block;
+  width: fit-content;
+}
+.bg-ellipse{
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--secondary-mustard);
+  position: absolute;
+}
+
+.hero {
+  width: 80%;
+  height: 95vh;
+  background-color: var(--primary-green);
+  padding-top: calc(var(--nav-height) + 5%);
+  padding-left: 5%;
+}
+.hero h1 {
+  width: 65%;
+}
+.hero p {
+  width: 55%;
+  color: var(--white);
+  line-height: 2;
+  font-size: 1rem;
+  margin: 2rem 0 3rem;
+}
+.hero .image-container {
+  position: absolute;
+  width: 80%;
+  right: -27%;
+  top: 56.5%;
+  z-index: 997;
+}
+.hero .shop-now {
+  position: absolute;
+  padding-top: 1rem;
+  right: -7%;
+  top: 40%;
+  background-color: var(--secondary-mustard);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 998;
+}
+.hero .shop-now span {
+  font-size: 1.8rem;
+  width: 60%;
+}
+.hero .hero-bg-ellipse{
+  left: 30%;
+  top: 35%;
+  opacity: 0.05;
+}
+
+/* ------------------------------------------- FEATURED CARDS ------------------------------------------------------ */
+.featured-cards{
+  width: 100%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 100px;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+.featured-cards .card{
+  position: relative;
+  border-radius: 25px;
+  padding: 5%;
+  width: 100%;
+}
+.featured-cards .card h3{
+  color: white;
+  margin-top: 0.75rem;
+}
+.featured-cards p{
+  color: white;
+  width: 80%;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.5;
+}
+.featured-cards .card a{
+  display: block;
+  margin-top: 1rem;
+  width: fit-content;
+}
+.featured-cards .card.item-1{
+  background-color: var(--primary-green);
+}
+.featured-cards .card.item-1 h4{
+  color: var(--secondary-mustard);
+}
+.featured-cards .card.item-1 p{
+  color: var(--white);
+}
+.featured-cards .card .image-container{
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  right: -10%;
+}
+.featured-cards .card.item-1 .image-container{
+  top: 35%;
+  width: 55%;
+}
+.featured-cards .card.item-2{
+  background-color: var(--secondary-mustard);
+}
+.featured-cards .card.item-2 h4{
+  color: var(--primary-green);
+}
+.featured-cards .card.item-2 p{
+  color: var(--black);
+}
+.featured-cards .card.item-2 .image-container{
+  top: 50%;
+}
+.featured-cards .featured-bg-ellipse{
+  right: -10%;
+  top: 40%;
+  opacity: 0.35;
+}
+
+/* ------------------------------------------- WHO WE ARE ------------------------------------------------------ */
+.about{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+.about .about-content .image-container, .about .about-content .copy{
+  width: 50%;
+}
+.about .about-content .image-container img{
+  scale: 1.3;
+  object-fit: cover;
+}
+.about .about-content .copy{
+  padding: 3%;
+  background-color: var(--primary-green);
+ 
+}
+.about .about-content .copy p{
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+.about .bg-ellipse.about-bg-ellipse{
+  background-color: var(--black);
+  opacity: 0.2;
+  left: -10%;
+  top: -15%;
+}
+.about .copy .bg-ellipse.about-copy-bg-ellipse{
+  opacity: 0.05;
+  right: -5%;
+  top: 35%;
+}
+
+/* ------------------------------------------- PRODUCTS ------------------------------------------------------ */
+.products{
+  padding-right: 5%;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.products .title-menu{
+  width: 90%;
+  margin: 2rem auto;
+  align-items: center;
+}
+.products .title-menu h2{
+  text-align: left;
+  width: fit-content;
+  margin-bottom: 0;
+}
+.products .title-menu .menu .selector-btn{
+  border: none;
+  outline: none;
+  background-color: var(--grey);
+  padding: 1rem;
+  color: var(--black);
+  border-radius: 7px;
+  font-family: inherit;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+.products .title-menu .menu .selector-btn.current, .products .title-menu .menu .selector-btn:hover{
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+.products .title-menu .menu .selector-btn.current{
+  cursor: default;
+}
+
+/* ------------------------------------------- LIMITED OFFER ------------------------------------------------------ */
+.time-offer{
+  width: 100%;
+  background-color: var(--primary-green);
+}
+.time-offer .title-xl{
+  text-align: left;
+  width: fit-content;
+}
+.time-offer .counter{
+  background-color: var(--white);
+  padding: 3% 5%;
+  width: 40%;
+}
+.time-offer .counter h3{
+  width: 100%;
+  text-align: center;
+  color: var(--black);
+}
+.time-offer .counter .time .days{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time-offer .counter .time p{
+  text-align: center;
+  color: var(--black);
+  line-height: normal;
+}
+.time-offer .counter .time p.digits{
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.time-offer .image-container{
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  margin: auto;
+}
+
+/* ------------------------------------------- MEDIA QUERIES ------------------------------------------------------ */
+@media screen and (max-width: 1024px) {
+  .hero h1 {
+    width: 80%;
+  }
+  .hero p {
+    width: 70%;
+    margin: 2rem 0 4rem;
+  }
+  .hero .image-container {
+    top: 66%;
+    width: 85%;
+  }
+  .hero .shop-now {
+    top: 47%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        width: 90%;
+      }
+    .hero p {
+        width: 85%;
+        margin: 1rem 0 3rem;
+        font-size: var(--p);
+        line-height: 1.7;
+      }
+      .hero .shop-now {
+        top: 40%;
+        right: -13%;
+      }
+}
+
+@media screen and (max-width: 550px) {
+    .hero{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero h1, .hero p{
+        text-align: center;
+    }
+    .hero .image-container{
+        width: 90%;
+        left: 8%;
+        top: 70%;
+    }
+    .hero .shop-now{
+        display: none;
+    }
+  }
+  
