@@ -12,7 +12,9 @@ a{
   background-color: var(--secondary-mustard);
   position: absolute;
 }
-
+.submit-btn-loader{
+  width: 15%;
+}
 .hero {
   width: 80%;
   height: 95vh;
@@ -76,7 +78,7 @@ a{
 }
 .featured-cards .card{
   position: relative;
-  border-radius: 25px;
+  border-radius: var(--radius);
   padding: 5%;
   width: 100%;
 }
@@ -208,6 +210,7 @@ a{
 .time-offer{
   width: 100%;
   background-color: var(--primary-green);
+  margin-bottom: 5rem;
 }
 .time-offer .title-xl{
   text-align: left;
@@ -246,6 +249,334 @@ a{
   left: 10%;
   width: 80%;
   margin: auto;
+}
+
+/* ------------------------------------------- ARTICLE CARDS ------------------------------------------------------ */
+.blog-tips{
+  width: 100%;
+  padding: 0 5%;
+  margin-bottom: -10rem;
+  z-index: 2;
+}
+.blog-tips .blog-cards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.blog-tips .blog-cards .card{
+  border-radius: var(--radius);
+  background-color: var(--background);
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+.blog-tips .blog-cards .card .heading{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.blog-tips .blog-cards .card .heading .image-container{
+  width: 100%;
+  height: 200px;
+}
+.blog-tips .blog-cards .card .heading .image-container::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.9),  rgba(0,0,0,0))
+}
+.blog-tips .blog-cards .card .heading h3{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 80%;
+  color: var(--white);
+}
+.blog-tips .blog-cards .card .blog-body{
+  padding: 7% 7% 10%;
+}
+.blog-tips .blog-cards .card .blog-body p{
+  margin-bottom: 1.5rem;
+}
+.blog-tips .blog-cards .card .blog-body a{
+  color: var(--black);
+  font-weight: bold;
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 300ms ease;
+}
+.blog-tips .blog-cards .card .blog-body a::after{
+  content: '';
+  width: 20%;
+  height: 2px;
+  background-color: var(--secondary-mustard);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0rem;
+  transform-origin: left;
+  transition: width 300ms ease, left 300ms ease;
+}
+.blog-tips .blog-cards .card .blog-body a:hover{
+  padding-left: 0.5rem;
+}
+.blog-tips .blog-cards .card .blog-body a:hover::after{
+  width: 40%;
+  left: 0.5rem;
+}
+
+/* ------------------------------------------- MAILINGS LIST ------------------------------------------------------ */
+.subscribe{
+  background-color: var(--primary-green);
+  padding: 15rem 5% 5%;
+}
+.subscribe hr{
+  background-color: var(--secondary-mustard);
+  border: none;
+  margin: 3rem 0;
+  margin-left: 0;
+  opacity: 1;
+  height: 5px;
+}
+.subscribe .info h3{
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+.subscribe .info .form{
+  width: 50%;
+  position: relative;
+}
+.subscribe .info .form .input{
+  width: 100%;
+  background-color: var(--background);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+.subscribe .info .form .input input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  width: 70%;
+  padding-left: 0.5rem;
+}
+.subscribe .info .form .error{
+  color: red;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+.subscribe .info .form button{
+  font-family: inherit;
+  cursor: pointer;
+}
+.subscribe .image-container{
+  position: absolute;
+  right: 5%;
+  bottom: -20%;
+  width: 30%;
+}
+.subscribe .subscribe-bg-ellipse{
+  left: 45%;
+  top: 25%;
+  opacity: 0.05;
+}
+
+/* ------------------------------------------- CLIENT REVIEWS ------------------------------------------------------ */
+.reviews{
+  width: 100%;
+  padding: 0 5%;
+}
+.reviews .review-cards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.reviews .review-cards .card{
+  border-radius: var(--radius);
+  background-color: var(--white);
+  overflow: hidden;
+  padding: 5%;
+  width: 100%;
+  margin-top: 0;
+  transition: margin-top 300ms ease, background-color 300ms ease;
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.4); */
+}
+.reviews .review-cards .card:hover{
+  margin-top: -1rem;
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+.reviews .review-cards .card:hover p{
+  color: var(--white);
+}
+.reviews .review-cards .card h3{
+  width: 65%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.reviews .review-cards .card:nth-child(1) h3{
+  width: 70%;
+}
+.reviews .review-cards .card .client{
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
+}
+.reviews .review-cards .card .client h3{
+  margin: auto;
+}
+.reviews .review-cards .card .client p{
+  font-weight: bold;
+}
+.reviews .review-cards .card .stars{
+  width: 50%;
+  margin: auto;
+}
+.reviews .review-cards .card .stars .fa-solid{
+  color: var(--secondary-mustard);
+  font-size: calc(var(--p) + 0.5rem);
+}
+
+/* ------------------------------------------- CONTACT US ------------------------------------------------------ */
+.contact-us{
+  width: 100%;
+}
+.contact-us h2{
+  margin-bottom: 1rem;
+}
+.contact-us p{
+  text-align: center;
+  /* width: 30%;
+  margin: auto; */
+}
+.contact-us .form-section{
+  width: 100%;
+  margin-top: 2rem;
+  background-color: var(--primary-green);
+  padding: 5%;
+}
+.contact-us .form-section .image-container{
+  width: 45%;
+  border-radius: var(--radius);
+}
+.contact-us .form-section .form{
+  width: 50%;
+}
+.contact-us .form-section .form .input{
+  width: 100%;
+  background-color: var(--background);
+  border-radius: 7px;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+.contact-us .form-section .form .input input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding-left: 0.5rem;
+}
+.contact-us .form-section .form .input .error{
+  position: absolute;
+  color: red;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.contact-us .form-section .form .input:has(.select) > .error{
+  right: 3rem;
+}
+.contact-us .form-section .form .input:has(#message) > .error{
+  top: 90%;
+}
+.contact-us .form-section .form .contact-email .input:nth-child(1){
+  margin-right: 1rem;
+}
+.contact-us .form-section .form .input textarea{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+.contact-us .form-section .form .input select{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+.contact-us .form-section .form .input select option{
+  padding: 1rem;
+}
+.contact-us .form-section .form .mailings-request{
+  margin: 2rem 0;
+}
+.contact-us .form-section .form .mailings-request p{
+  color: var(--white);
+  width: 70%;
+  text-align: left;
+}
+.contact-us .form-section .form .mailings-request p span{
+  color: var(--secondary-mustard);
+}
+.contact-us .form-section .form .mailings-request input{
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: var(--white);
+}
+.contact-us .form-section .form .submit-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: inherit;
+  width: fit-content;
+  max-width: 30%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ------------------------------------------- FOOTER ------------------------------------------------------ */
+footer{
+  width: 100%;
+  padding: 1rem 5%;
+  background-color: var(--black);
+  margin-top: 2rem;
+}
+footer p{
+  color: var(--white);
+}
+
+/* ------------------------------------------- WHATSAPP ICON ------------------------------------------------------ */
+.whatsapp-icon{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color:#25D366;
+  padding: 3%;
+  border-radius: 50%;
+  border: 10px solid var(--background);
+  right: 5%;
+  bottom: 10%;
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 998;
+  cursor: pointer;
+}
+.whatsapp-icon .fa-brands{
+  font-size: calc(var(--p) + 2rem);
 }
 
 /* ------------------------------------------- MEDIA QUERIES ------------------------------------------------------ */

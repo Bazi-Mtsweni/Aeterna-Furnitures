@@ -22,6 +22,7 @@
   --p: 0.85rem;
 
   --nav-height: 10vh;
+  --radius: 25px;
 }
 
 /* ------------------------------------------- COLOURS ------------------------------------------------------------ */
@@ -30,8 +31,9 @@ body {
   --primary-green-hover: #00361a;
   --secondary-mustard: #d4af37;
   --secondary-mustard-hover: #9c8024;
+  --background: #ffffff;
   --black: #2f2f2f;
-  --white: #f5f5dc;
+  --white: #F5F5DC;
   --grey: rgba(30, 30, 30, 0.1);
   --accent: #ffdb58;
 
@@ -40,6 +42,7 @@ body {
   font-size: var(--p);
   overflow-x: hidden !important;
   max-width: 100% !important;
+  background-color: var(--background);
 }
 
 /* ------------------------------------------- CUSTOM STYLES ------------------------------------------------------ */

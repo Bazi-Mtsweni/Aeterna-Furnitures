@@ -139,6 +139,183 @@
             <img src="./images/ad-image.webp" alt="Aeterna Furnitures Limited Offer">
         </div>
     </section>
+
+    <hr>
+
+    <section class="blog-tips">
+        <h2>Interior Design Tips</h2>
+        <div class="blog-cards">
+            <div class="card">
+                <div class="heading">
+                    <div class="image-container">
+                        <img src="./images/article-bed.webp" alt="Tips for an elegant home" title="An Elegant Home">
+                    </div>
+                    <h3>5 Timeless Interior Design Tips for a Classic and Elegant Home</h3>
+                </div>
+                <div class="blog-body">
+                    <p>Creating a home that feels timeless is more than just following trends—it&apos;s about making design choices that will stand the test of time. Here are five key tips to help you achieve a space that feels elegant, classic, and enduring...</p>
+                    <a href="#">More Tips On An Elegant Home →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="heading">
+                    <div class="image-container">
+                        <img src="./images/article-chair.webp" alt="Tips for a compact living space" title="A Compact Living Space">
+                    </div>
+                    <h3>Small Space, Big Impact: Interior Design Tips for Compact Living</h3>
+                </div>
+                <div class="blog-body">
+                    <p>Just because your living space is small doesn&apos;t mean it can&apos;t be beautifully designed. With the right choices, you can turn a compact space into a stylish, functional haven. Here&apos;s how to make the most of every square inch...</p>
+                    <a href="#">More Tips On Compact Living →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="heading">
+                    <div class="image-container">
+                        <img src="./images/article-couch.webp" alt="Tips for choosing statement pieces" title="Statement Piecies That Transform Your Home">
+                    </div>
+                    <h3>How to Select the Perfect Statement Piece for Your Living Room</h3>
+                </div>
+                <div class="blog-body">
+                    <p>The right statement piece can completely transform your living room, adding personality and charm. But selecting the perfect one can be tricky. Here&apos;s how to choose a statement furniture piece that fits your style...</p>
+                    <a href="#">More Tips On Statement Pieces →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="bg-ellipse subscribe-bg-ellipse"></div>
+        <hr>
+        <div class="info">
+            <h3>Consider subscribing to our mailings list for more tips</h3>
+            <form id="subscriber-form" class="form">
+                <div class="input">
+                    <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter Your Email Address" required onkeyup="validateEmail(this, 'email-error');">
+                    <input type="hidden" name="bot-check" id="bot-check">
+                    <button class="submit-btn btn-green" id="newsletter-submit">
+                        <span>Sign Me Up!</span>
+                        <img id="newsletter-loader" class="submit-btn-loader" src="./images/loader.gif" alt="Button Loader" title="Loading..." style="display: none;">
+                    </button>
+                </div>
+                <p class="error" id="subscriber-email-error"></p>
+            </form>
+            <div class="image-container">
+                <img src="./images/megaphone_.png" alt="Megaphone">
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-cards">
+            <div class="card">
+                <h3>A Beautiful Blend of Comfort and Style</h3>
+                <p>I purchased the Monaco Heritage Sofa, and it has completely transformed my living room. The craftsmanship is impeccable, and the quality of the materials is evident from the moment you sit down. It's not just a sofa—it&apos;s a statement piece that combines comfort and style effortlessly. I&apos;m constantly receiving compliments from guests, and I couldn&apos;t be happier with my purchase.</p>
+                <div class="client">
+                    <h3>Sarah W.</h3>
+                    <p>Interior Design Enthusiast</p>
+                </div>
+                <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Timeless Quality that Lasts</h3>
+                <p>The Emerson Lounge Chair I ordered from Aeterna is now my favorite piece in the house. It&apos;s beautifully crafted and unbelievably comfortable. What I love most is that it feels timeless—like something I&apos;ll keep for decades, and it will never go out of style. The attention to detail in the stitching and the materials used are top-notch. I can&apos;t recommend Aeterna Furnitures enough!</p>
+                <div class="client">
+                    <h3>Mathapelo M.</h3>
+                    <p>Homeowner</p>
+                </div>
+                <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="card">
+                <h3>A Masterpiece for My Home</h3>
+                <p>Working with Aeterna Furnitures was a dream. I had a custom piece designed—a dining table—and the entire experience, from the design process to delivery, was seamless. The finished product exceeded my expectations. It&apos;s truly a masterpiece that brings warmth and elegance to our dining room. I appreciate their dedication to creating timeless, high-quality furniture.</p>
+                <div class="client">
+                    <h3>Lena G.</h3>
+                    <p>Custom Furniture Client</p>
+                </div>
+                <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="contact-us">
+        <h2>Talk To Us</h2>
+        <p>Let us know how we can assist you in turning your house into a uniquely-styled classic home.</p>
+        <div class="form-section flex-res">
+            <div class="image-container">
+                <img src="./images/couch.webp" alt="Styled Couch with Throw">
+            </div>
+            <form class="form">
+                <div class="input">
+                    <input type="text" name="name" id="name" placeholder="Your Name *" required onkeyup="validateName(this, 'name-error');">
+                    <div class="error" id="name-error"></div>
+                </div>
+                <div class="contact-email flex-res">
+                    <div class="input">
+                        <input type="tel" name="tel" id="tel" placeholder="Contact Number *" required onkeyup="validateTel(this, 'tel-error');">
+                        <div class="error" id="tel-error"></div>
+                    </div>
+                    <div class="input">
+                        <input type="email" name="email" id="email" placeholder="Email Address *" required onkeyup="validateEmail(this, 'email-error');">
+                        <div class="error" id="email-error"></div>
+                    </div>
+                </div>
+                <div class="input">
+                    <select name="service" id="service" class="select">
+                        <option value="">-- Select Option --</option>
+                        <option value="Custom Furniture Design">Custom Furniture Design</option>
+                        <option value="Purchase and Delivery">Purchase and Delivery</option>
+                        <option value="Quotation">Quotation(s)</option>
+                        <option value="Review or Suggestion">Review / Suggestions</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span id="select-error" class="error"></span>
+                </div>
+                <div class="input">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Please give us more details..." required onkeyup="validateMessage(this, 'message-error')" style="padding-left: .5rem;"></textarea>
+                    <span id="message-error" class="error"></span>
+                </div>
+                <div class="mailings-request flex">
+                    <p>Would you like to sign up for free tips on furniture aesthetics and interior design? <span>Please tick the box</span></p>
+                    <input type="checkbox" name="mailings-check" id="mailings-check" value="Yes">
+                </div>
+                <input type="hidden" name="bot-check" id="bot-check">
+                <button class="submit-btn btn-yellow" id="contact-submit">
+                    <span>Send Message</span>
+                    <img id="contact-loader" class="submit-btn-loader" src="./images/loader.gif" alt="Button Loader" title="Loading..." style="display: none;">
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <?php require "./components/footer.php"; ?>
+
+    <a href="#" class="whatsapp-icon" title="Chat with us on whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 </body>
 
 </html>
